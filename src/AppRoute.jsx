@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
+import About from "./pages/About";
 
 const router = [
   {
@@ -15,7 +16,7 @@ const router = [
   },
   {
     path: "/about",
-    element: <Home />,
+    element: <About />,
   },
   {
     path: "/project",
@@ -41,7 +42,7 @@ function AppRoute() {
             <Route key={index} path={route?.path} element={route?.element} />
           ))}
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );

@@ -1,5 +1,6 @@
 import title from "../assets/images/title.png";
-import { NavLink } from "react-router-dom";
+import { navs } from "../data/navs";
+import NavButton from "./NavButton";
 
 export default function Navbar() {
   return (
@@ -10,21 +11,9 @@ export default function Navbar() {
         </div>
         <div className="links">
           <ul className="flex gap-6">
-            <li className="text-xl px-3 py-2 cursor-pointer hover:text-violet-800 font-semibold transition duration-300 ease-in-out">
-              <NavLink to={"/home"}>HOME</NavLink>
-            </li>
-            <li className="text-xl px-3 py-2 cursor-pointer hover:text-violet-800 font-semibold transition duration-300 ease-in-out">
-              <NavLink to={"/about"}>ABOUT ME</NavLink>
-            </li>
-            <li className="text-xl px-3 py-2 cursor-pointer hover:text-violet-800 font-semibold transition duration-300 ease-in-out">
-              <NavLink to={"/project"}>PROJECTS</NavLink>
-            </li>
-            <li className="text-xl px-3 py-2 cursor-pointer hover:text-violet-800 font-semibold transition duration-300 ease-in-out">
-              <NavLink to={"/achievement"}>ACHIEVEMENTS</NavLink>
-            </li>
-            <li className="text-xl px-3 py-2 cursor-pointer hover:text-violet-800 font-semibold transition duration-300 ease-in-out">
-              <NavLink to={"/contact"}>CONTACTS</NavLink>
-            </li>
+            {navs.map((nav, index) => (
+              <NavButton link={nav.link} text={nav.text} key={index} />
+            ))}
           </ul>
         </div>
       </nav>

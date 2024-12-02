@@ -1,4 +1,5 @@
 import homeProfile from "../assets/images/home-profile.webp";
+import { personal } from "../data/personalInfo";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
               Hello,
             </p>
             <p className="text-5xl font-bold font-mono my-5 text-violet-700">
-              I am <span className="text-violet-800">RUTIK KALE</span>.
+              I am <span className="text-violet-800">{personal.name}</span>.
             </p>
             <p className="text-xl font-mono text-gray-600">
               A passionate{" "}
