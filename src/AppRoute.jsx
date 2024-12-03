@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 import About from "./pages/About";
+import Project from "./pages/ProjectPage";
 
 const router = [
   {
@@ -20,7 +21,7 @@ const router = [
   },
   {
     path: "/project",
-    element: <Home />,
+    element: <Project />,
   },
   {
     path: "/achievement",
