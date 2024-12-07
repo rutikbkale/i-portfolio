@@ -5,6 +5,7 @@ import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 import About from "./pages/About";
 import Project from "./pages/ProjectPage";
+import ContactPage from "./pages/ContactPage";
 
 const router = [
   {
@@ -29,7 +30,7 @@ const router = [
   },
   {
     path: "/contact",
-    element: <Home />,
+    element: <ContactPage />,
   },
 ];
 
