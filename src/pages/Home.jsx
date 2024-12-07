@@ -23,7 +23,7 @@ export default function Home() {
             href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center bg-gradient-to-r from-violet-500 to-indigo-500 hover:bg-white text-white hover:text-indigo-500 border border-violet-700 rounded-md text-center py-2 px-4 shadow-md shadow-violet-600 transition-all duration-300"
+            className="flex items-center justify-center bg-gradient-to-r from-violet-500 to-indigo-500 hover:bg-white text-white border border-violet-700 rounded-md text-center py-2 px-4 shadow-md hover:shadow-violet-600 transition-all duration-300"
           >
             <FaGithub className="mr-2" />
             Github
@@ -34,7 +34,7 @@ export default function Home() {
             href={personal.leetcode}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center bg-gradient-to-r from-violet-500 to-indigo-500 hover:bg-white text-white hover:text-indigo-500 border border-violet-700 rounded-md text-center py-2 px-4 shadow-md shadow-violet-600 transition-all duration-300"
+            className="flex items-center justify-center bg-gradient-to-r from-violet-500 to-indigo-500 hover:bg-white text-white border border-violet-700 rounded-md text-center py-2 px-4 shadow-md hover:shadow-violet-600 transition-all duration-300"
           >
             <SiLeetcode className="mr-2" />
             Leetcode

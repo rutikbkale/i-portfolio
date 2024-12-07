@@ -6,6 +6,7 @@ import Footer from "./component/Footer";
 import About from "./pages/About";
 import Project from "./pages/ProjectPage";
 import ContactPage from "./pages/ContactPage";
+import AchivementPage from "./pages/AchivementPage";
 
 const router = [
   {
@@ -26,7 +27,7 @@ const router = [
   },
   {
     path: "/achievement",
-    element: <Home />,
+    element: <AchivementPage />,
   },
   {
     path: "/contact",

@@ -79,7 +79,6 @@ export const projects = [
       "This is a dynamic music website developed using HTML, CSS, and JavaScript, designed to provide a platform where users can explore and listen to a curated playlist. The website combines an engaging user interface with seamless functionality to deliver a smooth music-listening experience.",
     techStack: ["HTML", "CSS", "Javascript"],
     link: "https://github.com/rutikbkale/musichub",
-    // image: "../assets/images/music-hub.png",
     image: musichub,
   },
   {
@@ -90,5 +89,75 @@ export const projects = [
     techStack: ["AWT", "Swing", "MySQL"],
     link: "https://github.com/rutikbkale/A_R_S_Project",
     image: ars,
+  },
+];
+
+export const techStack = [
+  {
+    id: 1,
+    title: "FrontEnd",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 2,
+    title: "BackEnd",
+    tech: ["Java", "Python", "C++", "Php"],
+  },
+  {
+    id: 3,
+    title: "Database",
+    tech: ["MySQL", "MongoDB", "PostgreSQL"],
+  },
+  {
+    id: 4,
+    title: "Framework",
+    tech: [
+      "Spring",
+      "Springboot",
+      "Hibernate",
+      "React",
+      "Bootstrap",
+      "Tailwind css",
+    ],
+  },
+  {
+    id: 5,
+    title: "Tools",
+    tech: [
+      "Git",
+      "Github",
+      "VS code",
+      "Eclipse",
+      "Netbeans",
+      "Postman",
+      "Sql yog",
+    ],
+  },
+];
+
+export const certificates = [
+  {
+    id: 1,
+    title: "Programming data structure & algorithm",
+    issuer: "NPTEL",
+    date: "2024-09-22",
+  },
+  {
+    id: 2,
+    title: "Hackthon Partition",
+    issuer: "JSPM group",
+    date: "2024-03-20",
+  },
+  {
+    id: 3,
+    title: "Full Stack Web Developer",
+    issuer: "Infosys Springboard",
+    date: "2023-11-02",
+  },
+  {
+    id: 4,
+    title: "Full Stack Java Developer",
+    issuer: "Besant Technologies",
+    date: "2023-06-12",
   },
 ];
