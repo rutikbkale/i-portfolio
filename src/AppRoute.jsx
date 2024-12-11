@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Navbar from "./component/Navbar";
@@ -38,7 +38,7 @@ const router = [
 function AppRoute() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <Routes>
           {router.map((route, index) => (
@@ -46,7 +46,7 @@ function AppRoute() {
           ))}
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
