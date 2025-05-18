@@ -112,10 +112,13 @@ export const techStack = [
     id: 4,
     title: "Framework",
     tech: [
+      "React" js,
+      "Node js",
+      "Express js",
+      "Material UI",
       "Spring",
       "Springboot",
       "Hibernate",
-      "React",
       "Bootstrap",
       "Tailwind css",
     ],
@@ -130,7 +133,6 @@ export const techStack = [
       "Eclipse",
       "Netbeans",
       "Postman",
-      "Sql yog",
     ],
   },
 ];
