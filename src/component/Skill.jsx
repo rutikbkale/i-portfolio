@@ -1,22 +1,18 @@
 /* eslint-disable react/prop-types */
-const Skill = ({ skill }) => {
+export default function Skill({ skill }) {
   return (
-    <div className="skill bg-violet-50 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-      <h3 className="text-xl md:text-2xl font-semibold font-serif text-violet-700 mb-4">
-        {skill.title}
-      </h3>
-      <div className="techStack flex flex-wrap gap-2">
-        {skill.tech.map((t, index) => (
+    <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors hover:border-violet-200">
+      <h2 className="text-lg font-bold text-slate-950">{skill.title}</h2>
+      <div className="mt-5 flex flex-wrap gap-2">
+        {skill.tech.map((technology) => (
           <span
-            key={index}
-            className="text-sm md:text-base bg-violet-100 text-violet-600 px-3 py-1 rounded-full font-medium hover:bg-violet-200 transition-colors"
+            key={technology}
+            className="rounded-lg border border-violet-100 bg-violet-50 px-3 py-2 text-sm font-medium text-violet-800"
           >
-            {t}
+            {technology}
           </span>
         ))}
       </div>
-    </div>
+    </article>
   );
-};
-
-export default Skill;
+}

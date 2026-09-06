@@ -1,17 +1,29 @@
 /* eslint-disable react/prop-types */
+import { FiMapPin } from "react-icons/fi";
+
 export default function Education({ education }) {
   return (
-    <div className="text-lg font-mono font-thin border border-violet-300 rounded-md hover:shadow-violet-400 shadow-md p-4 cursor-pointer transition-shadow duration-300 text-gray-600 text-justify">
-      <div className="edu-course md:text-2xl font-bold text-violet-700">
-        {education.name}
+    <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-colors hover:border-violet-200 sm:p-6">
+      <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+        <div>
+          <h3 className="text-lg font-bold text-slate-950 sm:text-xl">
+            {education.degree}
+          </h3>
+          <p className="mt-1 font-medium text-violet-700">
+            {education.institution}
+          </p>
+          <p className="mt-2 flex items-center gap-2 text-sm text-slate-500">
+            <FiMapPin aria-hidden="true" />
+            {education.location}
+          </p>
+        </div>
+        <p className="whitespace-nowrap text-sm font-semibold text-slate-600">
+          {education.duration}
+        </p>
       </div>
-      <div className="edu-institute text-sm md:text-xl font-thin text-gray-700">
-        {education.university}
+      <div className="mt-5 border-t border-slate-100 pt-4 text-sm text-slate-600">
+        CGPA: <span className="font-bold text-slate-900">{education.grade}</span>
       </div>
-      <div className="extra mt-2 flex justify-between text-sm">
-        <div className="grade text-gray-500">CGPA: {education.grade}</div>
-        <div className="duration text-gray-500">{education.duration}</div>
-      </div>
-    </div>
+    </article>
   );
 }

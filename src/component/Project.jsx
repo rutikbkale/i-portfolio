@@ -1,50 +1,66 @@
 /* eslint-disable react/prop-types */
+import { FaGithub } from "react-icons/fa";
+import { FiArrowUpRight, FiCode } from "react-icons/fi";
 
-export default function Project({ project }) {
+export default function Project({ project, index }) {
   return (
-    <div className="project bg-white text-gray-600 border border-violet-300 rounded-lg shadow-md hover:shadow-violet-400 transition-shadow duration-300 p-4 w-full md:w-[35%]">
-      {/* Project Image */}
-      <div className="project-image mb-4">
-        <img
-          src={project?.image}
-          alt="Project"
-          className="rounded-lg w-full h-40 object-cover bg-black"
-        />
-      </div>
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:border-violet-200 hover:shadow-xl hover:shadow-violet-900/5">
+      {project.image ? (
+        <div className="flex h-44 items-center justify-center overflow-hidden bg-slate-100 p-5">
+          <img
+            src={project.image}
+            alt={`${project.name} project preview`}
+            className="h-full w-full rounded-xl object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ) : (
+        <div className="flex h-44 items-center justify-between bg-violet-950 p-7 text-white">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-violet-300">
+              Project {String(index + 1).padStart(2, "0")}
+            </p>
+            <p className="mt-3 max-w-[12rem] text-2xl font-bold leading-tight">
+              Digital health records
+            </p>
+          </div>
+          <FiCode className="text-violet-300" size={48} aria-hidden="true" />
+        </div>
+      )}
 
-      {/* Project Name */}
-      <div className="project-name text-lg md:text-xl font-semibold text-violet-600 mb-2">
-        {project?.name}
-      </div>
+      <div className="flex flex-1 flex-col p-6">
+        <h2 className="text-xl font-bold text-slate-950">{project.name}</h2>
+        <p className="mt-3 flex-1 leading-7 text-slate-600">
+          {project.description}
+        </p>
 
-      {/* Project Description */}
-      <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-4">
-        {project.description}
-      </p>
+        <div className="mt-5 flex flex-wrap gap-2" aria-label={`${project.name} technologies`}>
+          {project.techStack.map((tech) => (
+            <span
+              className="rounded-lg bg-violet-50 px-2.5 py-1.5 text-xs font-semibold text-violet-800"
+              key={tech}
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
 
-      {/* Tech Stack */}
-      <div className="teckStack flex flex-wrap gap-2 mb-4">
-        {project.techStack.map((tech, i) => (
-          <span
-            className="text-sm bg-violet-100 text-violet-600 px-3 py-1 rounded-full font-medium"
-            key={i}
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-flex items-center justify-between rounded-xl border border-slate-200 px-4 py-3 font-semibold text-slate-700 transition-colors hover:border-violet-300 hover:bg-violet-50 hover:text-violet-800"
           >
-            {tech}
-          </span>
-        ))}
+            <span className="inline-flex items-center gap-2">
+              <FaGithub aria-hidden="true" />
+              View repository
+            </span>
+            <FiArrowUpRight aria-hidden="true" />
+          </a>
+        )}
       </div>
-
-      {/* Project Link */}
-      <div className="project-link bg-gradient-to-r from-violet-500 to-indigo-500 hover:from-indigo-500 hover:to-violet-500 text-white border border-violet-700 rounded-md py-1 px-2 text-center shadow-md shadow-violet-600 transition duration-300">
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm md:text-base font-semibold"
-        >
-          View on GitHub
-        </a>
-      </div>
-    </div>
+    </article>
   );
 }

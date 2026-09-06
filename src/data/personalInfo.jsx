@@ -1,165 +1,181 @@
-import musichub from "../assets/images/music-hub.png";
-import contactplus from "../assets/images/contact-plus.jpg";
-import blogVerse from "../assets/images/blog-verse.jpg";
-import expenseTracker from "../assets/images/expense-tracker.jpg";
-import ars from "../assets/images/ars.jpg";
-import obbms from "../assets/images/obbms.jpg";
+import contactPlusImage from "../assets/images/contact-plus.jpg";
+import bloodBankImage from "../assets/images/obbms.jpg";
 
 export const personal = {
   name: "Rutik Kale",
-  mobNo: "9172475163",
+  role: "Software Engineer",
+  currentTitle: "MERN Stack Developer",
+  phone: "+91 9172475163",
+  phoneHref: "tel:+919172475163",
   email: "kalerutik656@gmail.com",
-  address: "Pune, Maharashtra",
-  linkedin: "https://www.linkedin.com/in/rutik-kale-382793218/",
+  emailHref: "mailto:kalerutik656@gmail.com",
+  location: "Pune, Maharashtra",
+  linkedin: "https://www.linkedin.com/in/rutik-kale/",
   github: "https://github.com/rutikbkale",
   leetcode: "https://leetcode.com/u/rutikbkale/",
 };
 
-export const educations = [
+export const resumeUrl = `${import.meta.env.BASE_URL}Rutik-Kale-Resume.pdf`;
+
+export const summary =
+  "Software Engineer with nearly two years of experience building full-stack web applications with React.js, TypeScript, NestJS, Node.js, and MongoDB. I focus on responsive interfaces, secure REST APIs, real-time features, and modular systems that remain maintainable as products grow.";
+
+export const expertise = [
+  "React.js",
+  "TypeScript",
+  "NestJS",
+  "Node.js",
+  "MongoDB",
+  "REST APIs",
+];
+
+export const experiences = [
   {
-    id: 1,
-    name: "Master of Computer Application(MCA)",
-    university: "Savitribai Phule Pune University, Pune",
-    grade: "9.5",
-    duration: "2023 - 2025",
-  },
-  {
-    id: 2,
-    name: "Bachelor of Computer Science(BCS)",
-    university: "Shivaji University, Kolhapur",
-    grade: "9.13",
-    duration: "2020 - 2023",
+    id: "mitroz-technologies",
+    company: "Mitroz Technologies",
+    location: "Pune, Maharashtra",
+    title: "MERN Stack Developer",
+    duration: "Jan 2025 – Present",
+    summary:
+      "Developing full-stack business applications across responsive interfaces, backend services, data models, and third-party integrations.",
+    responsibilities: [
+      "Build scalable applications using React.js, TypeScript, NestJS, Node.js, MongoDB, and RESTful APIs with modular, maintainable architecture.",
+      "Create responsive, reusable Material UI experiences including dashboards, forms, data tables, filtering, pagination, validation, and role-based workflows.",
+      "Develop NestJS APIs with controllers, services, DTOs, middleware, validation, exception handling, authentication, and business logic.",
+      "Implement JWT and OTP authentication, RBAC, protected routes, and permission-based workflows for multi-role applications.",
+      "Integrate Razorpay and WebSockets for payment workflows, real-time trip and location updates, booking status changes, and live events.",
+      "Design MongoDB data models and integrate AWS, OTP/SMS, push notifications, file storage, and maps/location services.",
+    ],
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "NestJS",
+      "Node.js",
+      "MongoDB",
+      "WebSockets",
+      "Razorpay",
+      "AWS",
+    ],
   },
 ];
 
-export const summary =
-  "I am a motivated individual with a strong passion for learning and self-growth. As a quick learner and team player, I embrace challenges and responsibilities with enthusiasm. I enjoy solving problems creatively, backed by an analytical mindset and attention to detail. I value hard work, dedication, and continuous skill development.";
-
 export const projects = [
   {
-    id: 1,
+    id: "adrasha",
+    name: "Adrasha",
+    description:
+      "A digital health-record management application for ASHA workers, supporting profile management, health records, and streamlined data tracking through responsive, API-driven interfaces.",
+    techStack: [
+      "React.js",
+      "Material UI",
+      "Redux Toolkit",
+      "TanStack Query",
+      "Spring Boot",
+      "MongoDB",
+    ],
+    github: "https://github.com/kiran-ghorpade/ADRASHA",
+  },
+  {
+    id: "blood-bank-management-system",
+    name: "Blood Bank Management System",
+    description:
+      "A web application for managing blood inventory, donors, blood requests, search, and request workflows through responsive interfaces and RESTful APIs.",
+    techStack: ["React.js", "Express.js", "MongoDB", "REST APIs"],
+    github: "https://github.com/rutikbkale/OBBMSBS",
+    image: bloodBankImage,
+  },
+  {
+    id: "contact-plus",
     name: "Contact Plus",
     description:
-      "Contact Plus is a web-based contact management system designed to simplify the organization and retrieval of contact information. Built using Spring Boot as the backend framework and Thymeleaf as the template engine for generating dynamic web pages, the application allows users to securely store and manage their contact lists.",
-    techStack: ["Springboot", "Thymeleaf", "Tailwind css", "MySQL"],
-    link: "https://github.com/rutikbkale/contactplus",
-    image: contactplus,
-  },
-  {
-    id: 2,
-    name: "Blog verse",
-    description:
-      "BlogVerse is a Spring MVC-based web application that allows users to create and manage their own blogs across various categories. The platform promotes interaction and engagement among users by enabling them to read, like, and comment on blogs created by others. BlogVerse provides a user-friendly interface and essential features to make blogging an enjoyable and interactive experience.",
-    techStack: ["Springboot", "Spring MVC", "JSP", "Bootstrap css", "MySQL"],
-    link: "https://github.com/rutikbkale/Blog-Verse",
-    image: blogVerse,
-  },
-  {
-    id: 3,
-    name: "Expense Tracker",
-    description:
-      "Expense Tracker is a Java-based web application designed to help users efficiently manage and track their day-to-day expenses. This application allows users to record, categorize, and monitor their expenditures, providing a clear overview of their financial habits and aiding in budget management.",
-    techStack: ["Servlet", "MVC Architecture", "JSP", "Bootstrap css", "MySQL"],
-    link: "https://github.com/rutikbkale/Expanse-Tracker",
-    image: expenseTracker,
-  },
-  {
-    id: 4,
-    name: "Online Blood Bank Management System",
-    description:
-      "The Online Blood Bank Management System is a web-based application designed to streamline the process of blood donation and requisition by bringing all stakeholders—donors, patients/recipients, and blood bank administrators—onto a single platform. This system simplifies the management of blood inventory and ensures efficient communication between users.",
-    techStack: ["Servlet", "MVC Architecture", "JSP", "Bootstrap css", "MySQL"],
-    link: "https://github.com/rutikbkale/OBBMSBS",
-    image: obbms,
-  },
-  {
-    id: 5,
-    name: "Music Hub",
-    description:
-      "This is a dynamic music website developed using HTML, CSS, and JavaScript, designed to provide a platform where users can explore and listen to a curated playlist. The website combines an engaging user interface with seamless functionality to deliver a smooth music-listening experience.",
-    techStack: ["HTML", "CSS", "Javascript"],
-    link: "https://github.com/rutikbkale/musichub",
-    image: musichub,
-  },
-  {
-    id: 6,
-    name: "Airline Reservation System",
-    description:
-      "The Airline Reservation System is a ticket booking platform designed to simplify and automate the process of reserving flight tickets. The system enables users to input their travel details, such as source and destination, and view available flight options based on their preferences. It aims to provide a seamless and user-friendly experience for booking tickets and retrieving flight information.",
-    techStack: ["AWT", "Swing", "MySQL"],
-    link: "https://github.com/rutikbkale/A_R_S_Project",
-    image: ars,
+      "A contact management application with CRUD operations, pagination, sorting, and secure OAuth2 authentication through Google and GitHub.",
+    techStack: [
+      "Spring Boot",
+      "Thymeleaf",
+      "Tailwind CSS",
+      "MySQL",
+      "OAuth2",
+    ],
+    github: "https://github.com/rutikbkale/contactplus",
+    image: contactPlusImage,
   },
 ];
 
 export const techStack = [
   {
-    id: 1,
-    title: "FrontEnd",
-    tech: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    id: 2,
-    title: "BackEnd",
-    tech: ["Java", "Python", "C++", "Php"],
-  },
-  {
-    id: 3,
-    title: "Database",
-    tech: ["MySQL", "MongoDB", "PostgreSQL"],
-  },
-  {
-    id: 4,
-    title: "Framework",
+    id: "frontend",
+    title: "Frontend & State",
     tech: [
-      "React" js,
-      "Node js",
-      "Express js",
-      "Material UI",
-      "Spring",
-      "Springboot",
-      "Hibernate",
-      "Bootstrap",
-      "Tailwind css",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Zustand",
+      "TanStack Query",
     ],
   },
   {
-    id: 5,
-    title: "Tools",
+    id: "backend",
+    title: "Backend & APIs",
     tech: [
-      "Git",
-      "Github",
-      "VS code",
-      "Eclipse",
-      "Netbeans",
-      "Postman",
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "RESTful APIs",
+      "JWT",
+      "RBAC",
+      "WebSockets",
     ],
+  },
+  {
+    id: "database",
+    title: "Databases",
+    tech: ["MongoDB", "MySQL"],
+  },
+  {
+    id: "cloud",
+    title: "Cloud & DevOps",
+    tech: ["AWS EC2", "AWS S3", "Docker"],
+  },
+  {
+    id: "tools",
+    title: "Tools & Integrations",
+    tech: ["Git", "GitHub", "Postman", "Swagger", "Razorpay"],
+  },
+];
+
+export const educations = [
+  {
+    id: "mca",
+    degree: "Master of Computer Applications (MCA)",
+    institution: "JSPM’s Rajarshi Shahu College of Engineering",
+    location: "Tathawade, Pune, Maharashtra",
+    grade: "9.27/10",
+    duration: "Aug 2023 – May 2025",
+  },
+  {
+    id: "bcs",
+    degree: "Bachelor of Computer Science (BCS)",
+    institution: "Sadguru Gadage Maharaj College",
+    location: "Karad, Maharashtra",
+    grade: "9.13/10",
+    duration: "Sept 2020 – June 2023",
   },
 ];
 
 export const certificates = [
   {
-    id: 1,
-    title: "Programming data structure & algorithm",
+    id: "nptel-dsa",
+    title: "Data Structures & Algorithms",
     issuer: "NPTEL",
-    date: "2024-09-22",
+    date: "Oct 2024",
   },
   {
-    id: 2,
-    title: "Hackthon Partition",
-    issuer: "JSPM group",
-    date: "2024-03-20",
-  },
-  {
-    id: 3,
-    title: "Full Stack Web Developer",
-    issuer: "Infosys Springboard",
-    date: "2023-11-02",
-  },
-  {
-    id: 4,
-    title: "Full Stack Java Developer",
-    issuer: "Besant Technologies",
-    date: "2023-06-12",
+    id: "jspm-hackathon",
+    title: "Hackathon Participation",
+    issuer: "JSPM Group",
+    date: "Mar 2023",
   },
 ];
